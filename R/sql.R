@@ -638,6 +638,7 @@ sqlGetResults <-
                 data[[i]] <- iconv(data[[i]], from = enc)
             if(as.is[i] || is.list(data[[i]])) next
             if(is.numeric(data[[i]])) next
+						if(cData$type[i] %in% c("varchar","char")) next
             if(cData$type[i] == "date")
                 data[[i]] <- as.Date(data[[i]])
             else if(cData$type[i] == "timestamp")
