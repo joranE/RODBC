@@ -8,3 +8,6 @@ config.log
 config.status
 *.RProj
 .gitignore
+a.out.dSYM/*
+src/Makevars
+src/config.h
